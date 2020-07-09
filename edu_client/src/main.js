@@ -11,6 +11,8 @@ import Element from "element-ui"
 import "element-ui/lib/theme-chalk/index.css"
 Vue.use(Element)
 
+// 导入极验
+import "../static/js/gt.js"
 
 //全局CSS
 import "../static/css/global.css"
@@ -19,6 +21,9 @@ Vue.config.productionTip = false
 
 import settings from "./settings";
 Vue.prototype.$settings = settings;
+
+
+
 
 /* eslint-disable no-new */
 new Vue({
