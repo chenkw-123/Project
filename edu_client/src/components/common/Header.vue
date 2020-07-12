@@ -23,7 +23,7 @@
                     <div class="login-box full-left">
                         <router-link to="/home/login/">个人中心</router-link>
                         &nbsp;|&nbsp;
-                        <span>退出登录</span>
+                        <span @click="exit">退出登录</span>
                     </div>
                 </div>
                 <!--          用户不存在      -->
@@ -35,7 +35,7 @@
                     <div class="login-box full-left">
                         <router-link to="/home/login/">登录</router-link>
                         &nbsp;|&nbsp;
-                        <span>注册</span>
+                        <router-link to="/user/register/">注册</router-link>
                     </div>
                 </div>
 
@@ -74,6 +74,12 @@
                     console.log(error.response);
                 })
             },
+            //退出登录，清空session和local
+            exit() {
+                localStorage.clear();
+                sessionStorage.clear();
+                location.reload();
+            }
         }
     }
 </script>

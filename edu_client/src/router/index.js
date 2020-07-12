@@ -5,6 +5,7 @@ Vue.use(Router)
 
 import Home from "../components/Home";
 import Login from "../components/Login";
+import Register from "../components/Register";
 export default new Router({
   routes: [
       {
@@ -21,6 +22,11 @@ export default new Router({
             path: '/home/login',
             name:"Login",
             component: Login
+        },
+      {
+            path: '/user/register',
+            name:"Register",
+            component: Register
         },
 
   ]
